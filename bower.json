@@ -1,0 +1,26 @@
+{
+  "name": "jquery-bs-fade",
+  "version": "0.0.1",
+  "homepage": "https://github.com/adamsea/jquery-bs-fade",
+  "authors": [
+    "Eric Adams <adams.ea@gmail.com>"
+  ],
+  "description": "jQuery Plugin to use CSS classes instead of .animate for .fadeIn and .fadeOut",
+  "main": "jquery.bs-fade.js",
+  "keywords": [
+    "jQuery",
+    "plugins",
+    "effects"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
