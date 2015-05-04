@@ -9,16 +9,16 @@
 
 	// From Bootstrap transition helper
 	var transitionEvent = (function() {
-		var el = document.createElement('bootstrap');
+		var name,
+			el = document.createElement('bootstrap'),
+			transEndEventNames = {
+				WebkitTransition : 'webkitTransitionEnd',
+				MozTransition    : 'transitionend',
+				OTransition      : 'oTransitionEnd otransitionend',
+				transition       : 'transitionend'
+			};
 
-		var transEndEventNames = {
-			WebkitTransition : 'webkitTransitionEnd',
-			MozTransition    : 'transitionend',
-			OTransition      : 'oTransitionEnd otransitionend',
-			transition       : 'transitionend'
-		};
-
-		for (var name in transEndEventNames) {
+		for (name in transEndEventNames) {
 			if (el.style[name] !== undefined) {
 				return transEndEventNames[name];
 			}
@@ -49,7 +49,7 @@
 		var $elem = $(this);
 		$elem
 			.removeClass('hide');
-		requestAnimationFrame(function() {
+		window.requestAnimationFrame(function() {
 			$elem
 				.addClass('in')
 				.one(transitionEvent, function() {
